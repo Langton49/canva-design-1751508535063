@@ -1,0 +1,139 @@
+.heroSection {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background: var(--forestGreen);
+}
+.leftPanel {
+  background: var(--forestGreen);
+  color: var(--white);
+  flex-basis: 60%;
+  padding: 60px 0 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+.mainHeadline {
+  font-size: 3.2rem;
+  font-family: var(--mainFont);
+  font-weight: 700;
+  margin-bottom: 36px;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+.subHeadlines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.subheadline {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: var(--white);
+  letter-spacing: 0.01em;
+}
+.eventInfo {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 22px;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ctaButton {
+  background: var(--mustardYellow);
+  color: var(--jetBlack);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 24px;
+  height: 48px;
+  padding: 0 32px;
+  font-size: 1.12rem;
+  letter-spacing: 0.03em;
+  transition: box-shadow 0.15s, background 0.22s;
+  box-shadow: 0 2px 8px 0 rgba(21,26,28,0.07);
+  margin-top: 20px;
+  border: none;
+  outline: none;
+}
+.ctaButton:hover,
+.ctaButton:focus {
+  background: #ffd43a;
+  box-shadow: 0 4px 12px 0 rgba(21,26,28,0.1);
+}
+.rightPanel {
+  flex-basis: 40%;
+  background: var(--white);
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+.heroImg {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center right;
+  border-radius: 0 0 0 80px;
+}
+
+@media (max-width: 1000px) {
+  .mainHeadline {
+    font-size: 2.3rem;
+  }
+  .leftPanel {
+    padding-left: 30px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .leftPanel, .rightPanel {
+    flex-basis: unset;
+    min-height: unset;
+    width: 100%;
+    padding: 24px 16px 18px 24px;
+  }
+  .rightPanel {
+    padding: 0;
+    margin-top: 0;
+    border-radius: 0;
+    min-height: 220px;
+  }
+  .heroImg {
+    height: 240px;
+    border-radius: 0;
+  }
+  .mainHeadline {
+    font-size: 2rem;
+  }
+  .subheadline {
+    font-size: 1.3rem;
+  }
+  .ctaButton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0 12px;
+  }
+}
+@media (max-width: 480px) {
+  .mainHeadline {
+    font-size: 1.36rem;
+  }
+  .leftPanel {
+    padding-left: 12px;
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+  .heroImg {
+    height: 160px;
+    border-radius: 0;
+  }
+}
