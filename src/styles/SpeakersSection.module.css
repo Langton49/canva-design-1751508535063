@@ -1,0 +1,101 @@
+.speakersSection {
+  background: var(--mustardYellow);
+  padding: 80px 0 80px 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.sectionTitle {
+  color: var(--jetBlack);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 56px;
+  letter-spacing: 0.03em;
+}
+.speakersGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 40px;
+  justify-content: center;
+}
+.speakerCard {
+  background: var(--mustardYellow);
+  border-radius: 12px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 0 0;
+  text-align: center;
+  min-width: 0;
+}
+.speakerImg {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px 0 rgba(21,26,28,0.07);
+  margin-bottom: 22px;
+}
+.speakerInfo {
+  color: var(--jetBlack);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+.speakerName {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.speakerRole {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.speakerCompany {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 6px;
+  color: var(--jetBlack);
+}
+.speakerDate {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 10px;
+  color: var(--jetBlack);
+}
+
+@media (max-width: 1150px) {
+  .speakersGrid {
+    grid-template-columns: repeat(2, minmax(220px, 300px));
+    gap: 32px;
+  }
+}
+@media (max-width: 800px) {
+  .speakersGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 16px;
+  }
+  .speakersSection {
+    padding: 44px 0 44px 0;
+  }
+}
+@media (max-width: 480px) {
+  .speakersSection {
+    padding: 32px 0 32px 0;
+  }
+  .speakerImg {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 10px;
+  }
+  .sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+  }
+  .speakerName {
+    font-size: 1.11rem;
+  }
+}
